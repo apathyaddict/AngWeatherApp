@@ -1,0 +1,28 @@
+<section class="search-result">
+
+    <div>
+        <h3>Let's find out the weather:</h3>
+        <div class="search-input">
+            <input class="input-search-bar" type="text" #city placeholder="enter city" name="city">
+            <button class="input-search-button" (click)="getCity(city.value)"> Search</button>
+        </div>
+    </div>
+
+    <div *ngIf="weatherResults">
+        <ul>
+            <h3 class="city-name">{{ weatherResults.city.name }}</h3>
+
+            <div class="weather-div">
+                <li *ngFor="let forecast of weatherResults.list.slice(0, 6)" class="div1">
+                    <p>{{ forecast.dt_txt | date:'EEEE d MMMM yyyy' }}</p>
+
+                    <h4>Temperature:</h4>
+                    <p>{{ forecast.main.temp }}°C</p>
+
+                    <h4>Forecast:</h4>
+                    <p>{{ forecast.weather[0].description }}</p>
+                </li>
+            </div>
+        </ul>
+    </div>
+</section>

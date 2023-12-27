@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'Dosis', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 0.08rem;
+}
+
+body {
+    background-color: #e9dbd3;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}

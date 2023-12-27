@@ -1,0 +1,48 @@
+<section *ngIf="weatherResults" class="main-app">
+    <div class="top-weather-div" [ngClass]=" getTopWeatherClass()">
+        <div class="weather-table-top">
+            <p class="forecast">{{weatherResults.list[0].weather[0].description}}</p>
+            <p>{{weatherResults.city.name}}, {{weatherResults.city.country}}</p>
+        </div>
+        <div class="custom-icon">
+            <ng-container *ngIf="isCloudy(); else sunnyIcon">
+                <i class="material-icons custom-icon">cloud</i>
+            </ng-container>
+            <ng-template #sunnyIcon>
+                <i class="material-icons custom-icon">wb_sunny</i>
+            </ng-template>
+        </div>
+        <div class="weather-table-top">
+            <p class="temp">{{weatherResults.list[0].main.temp| number: '1.0-0'}}° </p>
+        </div>
+    </div>
+
+    <div class="bottom-weather-div">
+        <div class="bottom-weathersubdiv">
+            <h2>Weather</h2>
+            <ul>
+                <li class="split-bottom">
+                    <div>
+                        <div>{{weatherResults.list[0].main.humidity}} %</div>
+                        <div>
+                            <p class="sub-font">humidity</p>
+                        </div>
+                        <div>{{weatherResults.list[0].main.feels_like}} °C</div>
+                        <div>
+                            <p class="sub-font">feels like</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="bottom-weathersubdiv">
+            <a [routerLink]="['/search']">
+                <h2>Search </h2>
+                <p class="sub-font">another city:</p>
+                <div class="split-bottom">
+                    <i class="material-icons">search </i>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>

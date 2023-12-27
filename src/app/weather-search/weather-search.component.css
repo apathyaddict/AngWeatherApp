@@ -1,0 +1,132 @@
+.search-result {
+    background-color: #fff;
+    /* min-height: 100%; */
+    margin: 0 auto;
+    /* max-width: 80%;
+    min-width: 5rem; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 80%;
+    width: 100%;
+    overflow-y: scroll;
+    min-width: 350px;
+    max-height: 750px;
+}
+
+.search-result div {
+    margin-bottom: 15px;
+}
+
+.search-input {
+    width: 100%;
+    display: flex;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 0.3rem;
+}
+
+.input-search-bar {
+    padding: 8px;
+    margin-right: 5px;
+    flex: 3;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    width: 100%;
+    border-radius: 5px;
+
+}
+
+.input-search-button {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #566e6e;
+
+    color: #fff;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8dbbba;
+    /* Change the button color on hover for a subtle effect */
+}
+
+ul {
+
+    margin: 0;
+
+    list-style-type: none;
+    border-radius: 10px;
+
+}
+
+li {
+
+    margin-bottom: 10px;
+    padding: 5px 15px 10px 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    border-radius: 10px;
+
+    word-break: normal;
+
+}
+
+li:hover {
+    transform: scale(1.02);
+    background-color: #fff;
+
+}
+
+p {
+    color: grey;
+    display: contents;
+    display: block;
+    white-space: normal;
+    height: 100%;
+
+}
+
+.city-name {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.weather-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+.div1 {
+    flex: 1;
+    padding: 1rem;
+    margin: 1rem;
+
+    max-height: 100%;
+    max-width: 200px;
+    min-width: 200px;
+    width: 100%;
+
+}
+
+.inline-text {
+    display: inline;
+    padding-top: 5px;
+    margin-top: 2px;
+    padding-right: 2px;
+}
