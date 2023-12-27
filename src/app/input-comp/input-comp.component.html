@@ -1,5 +1,5 @@
-<section *ngIf="weatherResults" class="main-app">
-    <div class="top-weather-div" [ngClass]=" getTopWeatherClass()">
+<section class="main-app" *ngIf="latitude !== undefined && longitude !== undefined; else elseBlock">
+    <div class=" top-weather-div" *ngIf="weatherResults" [ngClass]=" getTopWeatherClass()">
         <div class="weather-table-top">
             <p class="forecast">{{weatherResults.list[0].weather[0].description}}</p>
             <p>{{weatherResults.city.name}}, {{weatherResults.city.country}}</p>
@@ -46,3 +46,7 @@
         </div>
     </div>
 </section>
+
+<ng-template #elseBlock>
+    <p>Make sure to allow your location, otherwise it will not work.</p>
+</ng-template>
