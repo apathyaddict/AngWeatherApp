@@ -12,6 +12,6 @@ Search Functionality: Users can enter a location in the search bar to get long-t
 
 # Technologies Used
 
-Angular: A powerful JavaScript framework for building dynamic web applications.
-TypeScript: A superset of JavaScript that adds static typing and other features to enhance code quality and development experience.
-API Integration: The app integrates with a weather API to fetch and display accurate weather information.
+- Angular: A powerful JavaScript framework for building dynamic web applications.
+- TypeScript: A superset of JavaScript that adds static typing and other features to enhance code quality and development experience.
+- API Integration: The app integrates with a weather API to fetch and display accurate weather information.
